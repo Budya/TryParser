@@ -29,6 +29,7 @@ namespace ConsoleApp2
             driver.Url = @"http://tut.by";
 
             IWebElement element = driver.FindElement(By.TagName("body"));
+            var text = element.Text;
 
             Console.ReadKey();
         }
