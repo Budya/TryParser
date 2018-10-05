@@ -1,13 +1,14 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "cecb03a7a2c5f096487213be9293a66e1135a074"
+    "signature": "202b97be828596df39be5325db6b9da6c924cbc6"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "ConsoleApp2/1.0.0": {
         "dependencies": {
+          "Selenium.Support": "3.14.0",
           "Selenium.WebDriver": "3.14.0"
         },
         "runtime": {
@@ -46,6 +47,17 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.3.21018"
+          }
+        }
+      },
+      "Selenium.Support/3.14.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "3.14.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {
+            "assemblyVersion": "3.14.0.0",
+            "fileVersion": "3.14.0.0"
           }
         }
       },
@@ -402,6 +414,13 @@
       "sha512": "sha512-hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
       "path": "newtonsoft.json/10.0.3",
       "hashPath": "newtonsoft.json.10.0.3.nupkg.sha512"
+    },
+    "Selenium.Support/3.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FhZzfKr1M9zcWWPaiWRTRB+7IC+m8oAUelI5tKn71LIO5aNWdYBv+oDnoyqYefvt5f+sj+jLE7EupOw9oy0rMQ==",
+      "path": "selenium.support/3.14.0",
+      "hashPath": "selenium.support.3.14.0.nupkg.sha512"
     },
     "Selenium.WebDriver/3.14.0": {
       "type": "package",

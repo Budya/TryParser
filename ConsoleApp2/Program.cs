@@ -1,6 +1,8 @@
 ﻿using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.Extensions;
+using OpenQA.Selenium.Support.UI;
 
 
 namespace ConsoleApp2
@@ -26,10 +28,18 @@ namespace ConsoleApp2
             //options.AddArguments("--headless");
 
             IWebDriver driver = new ChromeDriver(service, options);
-            driver.Url = @"http://tut.by";
+            driver.Url = @"https://www.walmart.com/browse/clothing/mens-shoes/5438_1045804_1045807";
 
-            IWebElement element = driver.FindElement(By.TagName("body"));
-            var text = element.Text;
+            WebDriverWait waitForElement = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            waitForElement.Until(ExpectedConditions.ElementIsVisible(By.ClassName("GlobalFooterCopyright-text")));
+
+            IWebElement elem = driver.FindElement(By.ClassName("GlobalFooterCopyright-text"));
+
+            driver.ExecuteJavaScript("arguments[0].scrollIntoView(true);", elem);
+
+            IWebElement element = driver.FindElement(By.ClassName("search-result-gridview-items"));
+            string pageHtml = driver.PageSource.;
+            //var text = element.ToString();
 
             Console.ReadKey();
         }
